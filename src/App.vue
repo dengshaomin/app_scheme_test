@@ -15,7 +15,8 @@ export default{
       setTimeout(function(){
                     window.location.href= "https://www.baidu.com";
                 },3000)
-       window.location.href= this.shceme;
+      window.location.href= this.shceme;
+
       if(DeviceUtil.android()){
           
       }else if(DeviceUtil.ios()){
@@ -32,6 +33,7 @@ export default{
   <header>
     <p>Scheme:</p>
     <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
+    <a href="niopower://peservice/sourcebook?id=123">open app</a>
     <button v-on:click="submit" >submit</button>
   </header>
 
