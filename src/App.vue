@@ -1,4 +1,4 @@
-<script lang="js" >
+<script>
 import DeviceUtil from './assets/js/DeviceUtil'
 export default{
   data() {
@@ -12,14 +12,17 @@ export default{
         alert('please input shceme!')
         return
       }
-      window.location.href= this.shceme;
-      setTimeout(function(){
-                window.location.href= "https://www.baidu.com";
-            },3000)
+      
       if(DeviceUtil.android()){
-          
+          window.location.href= this.shceme;
+          setTimeout(function(){
+                    window.location.href= "https://www.baidu.com";
+                },3000)
       }else if(DeviceUtil.ios()){
-
+          window.location.href= this.shceme;
+                setTimeout(function(){
+                          window.location.href= "https://www.baidu.com";
+                      },3000)
       }else if(DeviceUtil.browser()){
 
       }
@@ -31,7 +34,7 @@ export default{
 <template>
   <header>
     <p>Scheme:</p>
-    <input type="text" v-bind:value="scheme" placeholder="scheme://host/path?params"/>
+    <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
     <button v-on:click="submit" >submit</button>
   </header>
 
