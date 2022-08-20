@@ -33,7 +33,7 @@ export default{
   <header>
     <p>Scheme:</p>
     <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
-    <a href="nio://peservice/sourcebook?id=123">open app</a>
+    <a href="niopower://peservice/sourcebook?id=PS-NIO-MAN00021-00000003">open app</a>
     <button v-on:click="submit" >submit</button>
   </header>
 
