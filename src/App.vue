@@ -3,7 +3,7 @@ import DeviceUtil from './assets/js/DeviceUtil'
 export default{
   data() {
 	  return {
-    	scheme: "niopower://peservice/sourcebook?id=123"
+    	scheme: "niopower://peservice/sourcebook?id=PS-NIO-MAN00021-00000003"
   	}
 	},
   methods:{
@@ -15,7 +15,7 @@ export default{
       setTimeout(function(){
                     window.location.href= "https://www.baidu.com";
                 },3000)
-      window.location.href= this.shceme;
+      window.location.href = this.shceme;
 
       if(DeviceUtil.android()){
           
@@ -33,8 +33,8 @@ export default{
   <header>
     <p>Scheme:</p>
     <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
-    <a href="niopower://peservice/sourcebook?id=PS-NIO-MAN00021-00000003">open app</a>
     <button v-on:click="submit" >submit</button>
+    <a :href="scheme">jump</a>
   </header>
 
 </template>
