@@ -1,4 +1,4 @@
-<script>
+<script lang="js" >
 import DeviceUtil from './assets/js/DeviceUtil'
 export default{
   data() {
@@ -39,6 +39,7 @@ export default{
 
 <style>
 header {
+  display: flex;
   width:100%;
 }
 
