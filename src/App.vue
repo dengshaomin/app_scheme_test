@@ -1,91 +1,52 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+<script>
+import DeviceUtil from './assets/js/DeviceUtil'
+export default{
+  data() {
+	  return {
+    	scheme: "niopower://peservice/sourcebook?id=123"
+  	}
+	},
+  methods:{
+    submit(){
+      if(this.scheme.length == 0){
+        alert('please input shceme!')
+        return
+      }
+      window.location.href= this.shceme;
+      setTimeout(function(){
+                window.location.href= "https://www.baidu.com";
+            },3000)
+      if(DeviceUtil.android()){
+          
+      }else if(DeviceUtil.ios()){
+
+      }else if(DeviceUtil.browser()){
+
+      }
+    }
+  }
+}
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <p>Scheme:</p>
+    <input type="text" v-bind:value="scheme" placeholder="scheme://host/path?params"/>
+    <button v-on:click="submit" >submit</button>
   </header>
 
-  <RouterView />
 </template>
 
-<style scoped>
+<style>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  width:100%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+input {
+  flex: 1;
+  margin-left: 10px;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+button{
+  margin-left: 10px;
 }
 </style>
