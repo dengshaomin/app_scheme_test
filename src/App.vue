@@ -12,17 +12,14 @@ export default{
         alert('please input shceme!')
         return
       }
-      
-      if(DeviceUtil.android()){
-          window.location.href= this.shceme;
-          setTimeout(function(){
+      setTimeout(function(){
                     window.location.href= "https://www.baidu.com";
                 },3000)
+       window.location.href= this.shceme;
+      if(DeviceUtil.android()){
+          
       }else if(DeviceUtil.ios()){
-          window.location.href= this.shceme;
-                setTimeout(function(){
-                          window.location.href= "https://www.baidu.com";
-                      },3000)
+          
       }else if(DeviceUtil.browser()){
 
       }
