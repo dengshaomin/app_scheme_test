@@ -33,15 +33,20 @@ export default{
   <header>
     <p>Scheme:</p>
     <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
-    <button v-on:click="submit" >submit</button>
-    <a :href="scheme">jump</a>
+    <a :href="scheme">open app</a>
   </header>
 
 </template>
 
 <style>
+a{
+  margin-left: 10px;
+  border: 2px solid rgb(0, 255, 72);
+  border-radius: 5px;
+}
 header {
   display: flex;
+  margin-left: 0px;
   width:100%;
 }
 
