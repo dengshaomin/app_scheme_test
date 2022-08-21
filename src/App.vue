@@ -68,6 +68,8 @@ input {
   display: flex;
   flex: 1;
   margin-left: 10px;
+  height: 100px;
+  overflow: scroll;
 }
 
 </style>
