@@ -30,15 +30,18 @@ export default{
 </script>
 
 <template>
-  <header>
+  <div>
     <p>Scheme:</p>
     <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
     <a :href="scheme">open app</a>
-  </header>
+  </div>
 
 </template>
 
 <style>
+p{
+  display: inline;
+}
 a{
   margin-left: 10px;
   border: 2px solid rgb(0, 255, 72);
