@@ -30,34 +30,44 @@ export default{
 </script>
 
 <template>
-  <div>
-    <p>Scheme:</p>
-    <input type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
-    <a :href="scheme">open app</a>
-  </div>
-
+<div>
+    <div class="div1" >
+      <p >Scheme:</p>
+      <input  type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
+    </div>
+    <div class="div1">
+      <a :href="scheme">open app</a>
+    </div>
+</div>
 </template>
 
 <style>
+
+div{
+  width: 100%;
+}
+.div1{
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
 p{
   display: inline;
 }
 a{
-  margin-left: 10px;
   border: 2px solid rgb(0, 255, 72);
   border-radius: 5px;
-}
-header {
-  display: flex;
-  margin-left: 0px;
-  width:100%;
+  padding: 5px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
 }
 
+
 input {
+  display: flex;
   flex: 1;
   margin-left: 10px;
 }
-button{
-  margin-left: 10px;
-}
+
 </style>
