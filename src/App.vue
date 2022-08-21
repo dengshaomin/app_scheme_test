@@ -33,7 +33,7 @@ export default{
 <div>
     <div class="div1" >
       <p >Scheme:</p>
-      <input  type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
+      <textarea  type="text" v-model="scheme" placeholder="scheme://host/path?params"/>
     </div>
     <div class="div1">
       <a :href="scheme">open app</a>
@@ -64,12 +64,11 @@ a{
 }
 
 
-input {
+textarea {
   display: flex;
   flex: 1;
+  height: 200px;
   margin-left: 10px;
-  height: 100px;
-  overflow: scroll;
 }
 
 </style>
